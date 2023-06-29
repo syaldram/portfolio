@@ -14,13 +14,19 @@ h5,
 h6 {
   font-family: "Raleway", sans-serif;
 }
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.navbar{
+  background-color: #2c2f3f;
+}
 
 /*--------------------------------------------------------------
 # Home
 --------------------------------------------------------------*/
 
 #Home {
-    background-image: url('/assets/hero_page.jpg');
+    background-image: url('/assets/images/hero_page.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -29,7 +35,6 @@ h6 {
     align-items: center;
     justify-content: center;
   }
-
 
 #Home h1 {
     margin: 0 0 10px 0;
