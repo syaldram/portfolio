@@ -34,7 +34,8 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  background-color: rgba(5, 13, 24, 0.3);
+  background-blend-mode: multiply;
 }
 
 #Home h1 {
@@ -50,7 +51,7 @@ h6 {
     color: #fff;
     margin-bottom: 50px;
     font-size: 40px;
-    font-weight: .5rem;
+    font-weight: 600;
     font-family: "Poppins", sans-serif;
     padding-bottom: 4px;
     letter-spacing: 1px;
