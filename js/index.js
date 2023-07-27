@@ -1,35 +1,23 @@
   /**
    * Hero type effect
    */
-  const listItems = document.querySelectorAll('.list-group-home-item');
-  let delay = 0;
-  
-  function typeEffect() {
-    listItems.forEach((item) => {
-      const text = item.textContent;
-      item.textContent = '';
-      for (let i = 0; i < text.length; i++) {
-        setTimeout(() => {
-          item.textContent += text[i];
-        }, delay);
-        delay += 100;
-      }
-    });
-    setTimeout(typeEffect, delay +1000);
-  }
-  
-  typeEffect();
+var typed = new Typed('#typed-text', {
+  strings: ["I am a DevOps Engineer.", "I am a Developer.", "I am a Freelancer."],
+  typeSpeed: 40,
+  backSpeed: 10,
+  loop: true
+});
   
 
 /**
  * Navbar links active state on scroll
  */
-const navLinks = document.querySelectorAll('.nav-link');
+var navLinks = document.querySelectorAll('.nav-link');
 
 window.addEventListener('scroll', () => {
-  const fromTop = window.scrollY + 200;
+  var fromTop = window.scrollY + 200;
   navLinks.forEach(link => {
-    const section = document.querySelector(link.hash);
+    var section = document.querySelector(link.hash);
     if (
       section.offsetTop <= fromTop &&
       section.offsetTop + section.offsetHeight > fromTop
@@ -41,4 +29,44 @@ window.addEventListener('scroll', () => {
   });
 });
 
-  
+
+// Get the About section element
+var aboutSection = document.querySelector('#about');
+
+// Get the .img-fluid element
+var aboutImg = document.querySelector('#about .img-fluid');
+var aboutContent = document.querySelector('#about .content');
+
+// Create an IntersectionObserver
+var observer = new IntersectionObserver(function(entries) {
+  // Check if the About section is intersecting with the viewport
+  if (entries[0].isIntersecting) {
+    // The About section is visible, add the fade-right class to the .img-fluid element
+    aboutImg.classList.add('fade-right');
+    aboutContent.classList.add('fade-left');
+  }
+});
+
+// Observe the About section
+observer.observe(aboutSection);
+
+/**
+ * Certification section of the web
+ */
+
+var certSection = document.querySelector('#certifications');
+// Create an IntersectionObserver
+var observer = new IntersectionObserver(function(entries) {
+  // Check if the About section is intersecting with the viewport
+  if (entries[0].isIntersecting) {
+    // The About section is visible, add the fade-right class to the .img-fluid element
+    var cert = document.querySelector('#certifications div');
+    cert.classList.add('fade-top');
+  }
+});
+
+// Observe the About section
+observer.observe(certSection);
+
+
+

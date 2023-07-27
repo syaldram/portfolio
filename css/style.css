@@ -36,6 +36,7 @@ h6 {
   justify-content: center;
   background-color: rgba(5, 13, 24, 0.3);
   background-blend-mode: multiply;
+  background-attachment: fixed;
 }
 
 #Home h1 {
@@ -57,6 +58,17 @@ h6 {
     letter-spacing: 1px;
     border-bottom: 3px solid #149ddd;
     list-style: none;
+}
+
+#typed-text {
+  color: #fff;
+  margin-bottom: 50px;
+  font-size: 40px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 4px;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #149ddd;
 }
 
 section {
@@ -124,7 +136,7 @@ section {
 }
 
 .fade-right {
-  animation: fade-right 1s ease-in-out;
+  animation: fade-right 3s ease-in-out;
 }
 
 @keyframes fadeInLeft {
@@ -140,9 +152,28 @@ section {
 
 .fade-left {
   animation-name: fadeInLeft;
-  animation-duration: 2s;
+  animation-duration: 3s;
 }
 
+/*--------------------------------------------------------------
+# Certifications
+--------------------------------------------------------------*/
+
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-top {
+  animation-name: fadeInTop;
+  animation-duration: 3s;
+}
 
 
 /*--------------------------------------------------------------
