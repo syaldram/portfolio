@@ -36,7 +36,6 @@ h6 {
   justify-content: center;
   background-color: rgba(5, 13, 24, 0.3);
   background-blend-mode: multiply;
-  background-attachment: fixed;
 }
 
 #Home h1 {
