@@ -66,4 +66,3 @@ var observer = new IntersectionObserver(function(entries) {
 
 // Observe the About section
 observer.observe(resumeSection);
-

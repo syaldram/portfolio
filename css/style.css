@@ -14,6 +14,10 @@ h5,
 h6 {
   font-family: "Raleway", sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -171,13 +175,13 @@ section {
   font-family: "Poppins", sans-serif;
   color: #050d18;
   font-style: normal;
-  font-size: x-small;
+  font-size: small;
 }
 
 .skills .progress-bar {
   width: 1px;
   height: 10px;
-  transition: 0.9s;
+  transition: width 2s ease-in-out;
   background-color: #149ddd;
 }
 
