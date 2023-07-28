@@ -3,8 +3,9 @@
    */
 var typed = new Typed('#typed-text', {
   strings: ["I am a DevOps Engineer.", "I am a Developer.", "I am a Freelancer."],
-  typeSpeed: 40,
-  backSpeed: 10,
+  typeSpeed: 100,
+  backSpeed: 50,
+  backDelay: 1500,
   loop: true
 });
   
@@ -51,22 +52,18 @@ var observer = new IntersectionObserver(function(entries) {
 observer.observe(aboutSection);
 
 /**
- * Certification section of the web
+ * Resume section of the web
  */
 
-var certSection = document.querySelector('#certifications');
+var resumeSection = document.querySelector('#resume');
 // Create an IntersectionObserver
 var observer = new IntersectionObserver(function(entries) {
-  // Check if the About section is intersecting with the viewport
   if (entries[0].isIntersecting) {
-    // The About section is visible, add the fade-right class to the .img-fluid element
-    var cert = document.querySelector('#certifications div');
-    cert.classList.add('fade-top');
+    var resume = document.querySelector('#resume .container');
+    resume.classList.add('fade-top');
   }
 });
 
 // Observe the About section
-observer.observe(certSection);
-
-
+observer.observe(resumeSection);
 

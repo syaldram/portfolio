@@ -155,27 +155,6 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Certifications
---------------------------------------------------------------*/
-
-@keyframes fadeInTop {
-  0% {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-top {
-  animation-name: fadeInTop;
-  animation-duration: 3s;
-}
-
-
-/*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
 .skill {
@@ -268,6 +247,22 @@ section {
   top: 0;
   background: #fff;
   border: 2px solid #1f5297;
+}
+
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-top {
+  animation-name: fadeInTop;
+  animation-duration: 1s;
 }
 
 /*--------------------------------------------------------------
