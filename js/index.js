@@ -66,3 +66,61 @@ var observer = new IntersectionObserver(function(entries) {
 
 // Observe the About section
 observer.observe(resumeSection);
+
+
+/**
+ * Skills section
+ */
+window.addEventListener('load', function() {
+  // Get the skills section
+  var skillsSection = document.querySelector('#skills');
+  
+  // Get all the progress bars
+  var progressBars = document.querySelectorAll('.progress-bar');
+  
+  // Set a flag to track if the animation has already played
+  var animationPlayed = false;
+  
+  // Create a function to animate the progress bars
+  var animateProgressBars = function() {
+    // Iterate over each progress bar
+    progressBars.forEach(function(progressBar) {
+      // Get the width of the progress bar
+      var width = progressBar.style.width;
+      
+      // Set the initial width to 0
+      progressBar.style.width = '0%';
+      
+      // Animate the width from 0 to its final value
+      var currentWidth = 0;
+      var interval = setInterval(function() {
+        if (currentWidth >= parseInt(width)) {
+          clearInterval(interval);
+        } else {
+          currentWidth++;
+          progressBar.style.width = currentWidth + '%';
+        }
+      }, 10);
+    });
+    
+    // Set the animation played flag to true
+    animationPlayed = true;
+  };
+  
+  // Create a function to check if the skills section is in view
+  var isSkillsSectionInView = function() {
+    var rect = skillsSection.getBoundingClientRect();
+    return rect.top >= 0 && rect.bottom <= window.innerHeight;
+  };
+  
+  // Add an event listener for scroll events
+  window.addEventListener('scroll', function() {
+    // Check if the skills section is in view and the animation has not played yet
+    if (isSkillsSectionInView() && !animationPlayed) {
+      // Animate the progress bars
+      animateProgressBars();
+    }
+  });
+});
+
+
