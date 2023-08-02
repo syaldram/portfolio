@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Investment Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link href="./blog.css" rel="stylesheet">
+    <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+        <nav class="navbar fixed-top navbar-expand-sm navbar-dark" aria-label="Third navbar example">
+            <div class="container-fluid">
+              <img src="../assets/images/logo.png" height="70" class="rounded-circle" alt="Saad">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+        
+              <div class="collapse navbar-collapse" id="navbarsExample03">
+                <ul class="navbar-nav ms-auto mb-2 mb-sm-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html#Home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../index.html#certifications">Certifications</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../index.html#skills">Skills</a>
+                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#resume">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#portfolio">Projects</a>
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+      <section id="about">
+        <div>
+            <div class="p-5 text-center">
+              <div class="container py-5 section-title">
+                <h1 class="">Investment Portfolio</h1>
+                <p class="fw-bold display-7">July 31, 2023 By Saad Yaldram</p>
+              </div>
+            </div>
+          </div>
+  
+      </section>
+      <section id="portfolio">
+        <div class="px-4 py-5 text-center section-title">
+          <h2 class="">Asset Allocations</h2>
+          <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Down below are my investment allocation percentages. The figures below are close estimate of my overall portfolio. The asset allocations are constantly changing, and I plan on updating this chart as time moves forward. I tend to be very conservative with my investment and diversifying my assets is my priority. You will see I am also interested in investing in crypto currency and gold. Although the gold and crypto assets make small percentage of my assets, I plan to invest more in the future. </p>
+            <div class="col-lg-6 mx-auto" id="chartContainer" style="height: 500px; width: 100%;">
+              <table class="mx-auto">
+                <thead>
+                    <tr>
+                    <th>Investment</th>
+                    <th>Type</th>
+                    <th>Allocation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>Stocks</td>
+                    <td>Stocks</td>
+                    <td>19%</td>
+                    </tr>
+                    <tr>
+                    <td>Bonds</td>
+                    <td>Bonds</td>
+                    <td>33%</td>
+                    </tr>
+                    <tr>
+                    <td>Mutual Funds</td>
+                    <td>Mutual Funds</td>
+                    <td>34%</td>
+                    </tr>
+                    <tr>
+                    <td>US Treasury Bills</td>
+                    <td>US Treasury</td>
+                    <td>8%</td>
+                    </tr>
+                    <tr>
+                    <td>Crypto Currency</td>
+                    <td>Crypto</td>
+                    <td>3%</td>
+                    </tr>
+                    <tr>
+                    <td>Gold</td>
+                    <td>Gold</td>
+                    <td>3%</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+          </div>
+        </div>
+      </section>
+ 
+      <section id="stocks">
+        <div class="px-4 py-5 text-center section-title">
+          <h2 class="">My stock watchlist</h2>
+          <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">I am a long-term passive investor in stock asset class. My trades reflect my personal interest in companies, products, and conservative growth. I am not a financial expert and the stocks listed below reflects 10% of my stock portfolio. The idea of the listed stock below is to provide a glimpse of my financial assets as an example.</p>
+            <div class="row align-items-center">
+              <!-- TradingView Widget BEGIN -->
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                {
+                "symbol": "NASDAQ:TSLA",
+                "width": 278,
+                "colorTheme": "light",
+                "isTransparent": true,
+                "locale": "en"
+              }
+                </script>
+              </div>
+              <!-- TradingView Widget END -->
+              <!-- TradingView Widget BEGIN -->
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                {
+                "symbol": "NYSE:DAL",
+                "width": 278,
+                "colorTheme": "light",
+                "isTransparent": true,
+                "locale": "en"
+              }
+                </script>
+              </div>
+              <!-- TradingView Widget END -->
+              <!-- TradingView Widget BEGIN -->
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                {
+                "symbol": "OMXHEX:NOKIA",
+                "width": 278,
+                "colorTheme": "light",
+                "isTransparent": true,
+                "locale": "en"
+              }
+                </script>
+              </div>
+              <!-- TradingView Widget END -->
+              <!-- TradingView Widget BEGIN -->
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                {
+                "symbol": "NYSE:PEB/PF",
+                "width": "278",
+                "colorTheme": "light",
+                "isTransparent": true,
+                "locale": "en"
+              }
+                </script>
+              </div>
+              <!-- TradingView Widget END -->
+              <!-- TradingView Widget BEGIN -->
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                {
+                "symbol": "NYSE:CVNA",
+                "width": "278",
+                "colorTheme": "light",
+                "isTransparent": true,
+                "locale": "en"
+              }
+                </script>
+              </div>
+              <!-- TradingView Widget END -->
+              <!-- TradingView Widget BEGIN -->
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                {
+                "symbol": "NYSE:LMT",
+                "width": "278",
+                "colorTheme": "light",
+                "isTransparent": true,
+                "locale": "en"
+              }
+                </script>
+              </div>
+              <!-- TradingView Widget END -->
+            </div>
+            <div class="row align-items-center">
+              <!-- TradingView Widget BEGIN -->
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                {
+                "symbol": "NASDAQ:COIN",
+                "width": "278",
+                "colorTheme": "light",
+                "isTransparent": true,
+                "locale": "en"
+              }
+                </script>
+              </div>
+              <!-- TradingView Widget END -->
+              <!-- TradingView Widget BEGIN -->
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                {
+                "symbol": "NASDAQ:HOOD",
+                "width": "278",
+                "colorTheme": "light",
+                "isTransparent": true,
+                "locale": "en"
+              }
+                </script>
+              </div>
+              <!-- TradingView Widget END -->
+              <!-- TradingView Widget BEGIN -->
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                {
+                "symbol": "NYSE:GME",
+                "width": "278",
+                "colorTheme": "light",
+                "isTransparent": true,
+                "locale": "en"
+              }
+                </script>
+              </div>
+              <!-- TradingView Widget END -->
+              <!-- TradingView Widget BEGIN -->
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                {
+                "symbol": "NYSE:PLNT",
+                "width": "278",
+                "colorTheme": "light",
+                "isTransparent": true,
+                "locale": "en"
+              }
+                </script>
+              </div>
+              <!-- TradingView Widget END -->
+              <!-- TradingView Widget BEGIN -->
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                {
+                "symbol": "NYSE:D",
+                "width": "278",
+                "colorTheme": "light",
+                "isTransparent": true,
+                "locale": "en"
+              }
+                </script>
+              </div>
+              <!-- TradingView Widget END -->
+              <!-- TradingView Widget BEGIN -->
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                {
+                "symbol": "NYSE:CMG",
+                "width": "278",
+                "colorTheme": "light",
+                "isTransparent": true,
+                "locale": "en"
+              }
+                </script>
+              </div>
+              <!-- TradingView Widget END -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="crypto">
+        <div class="px-4 py-5 text-center section-title">
+          <h2 class="">Crypto Currency</h2>
+          <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">I am an advocate of decentralized currency. I am an avid investor in crypto currency and blockchain technology. Down below are my crypto assets that I have invested over the years. Majority of my crypto assets are in ethereum which consist of the largest profit margin for me. </p>
+            <div class="row align-items-center">
+              <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinPriceBlock.js"></script><div id="coinmarketcap-widget-coin-price-block" coins="1027,3794,2010,1975,1376" currency="USD" theme="light" transparent="true" show-symbol-logo="true"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="mortgage">
+        <div class="px-4 py-5 text-center section-title">
+          <h2 class="">Mortgage Interest Rate</h2>
+          <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">I am interested in the daily mortgage interest rate and its effect on real estate market. Monitoring mortgage interest rates can help make informed decisions about when to lock in a good rate, avoid higher costs, and stay informed about current market conditions.</p>
+            <iframe frameborder="0" scrolling="no" style="border: 0; overflow: 0; width: 400px; height: 300px;" src="//www.mortgagecalculator.org/rates-widgets/mortgages/text-widget.php?advanced&amp;data=30yr_fr|15yr_fr"></iframe><br />
+          </div>
+        </div>
+      </section>
+    </main>
+    <section id="footer"> 
+      <div class="container-footer">
+          <a class="footer-link" href="https://www.linkedin.com/in/saad-yaldram-7b27a72a/"><img src="../assets/svg/linkedin.svg" alt="LinkedIn"> LinkedIn</a>
+          <a class="footer-link" href="https://github.com/syaldram"><img src="../assets/svg/github.svg" alt="GitHub"> GitHub</a>
+          <p class="copyright">© 2023 Saad Yaldram</p>
+        </div>
+    </section>  
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./blog.js"></script>
+  </body>
+</html>

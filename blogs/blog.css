@@ -1,0 +1,113 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #272829;
+  }
+  
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+font-family: "Raleway", sans-serif;
+}
+  
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    overflow: hidden;
+}
+
+.section-bg {
+background: #f5f8fd;
+}
+
+
+.section-title {
+padding-bottom: 30px;
+}
+
+.section-title h2 {
+font-size: 32px;
+font-weight: bold;
+margin-bottom: 20px;
+padding-bottom: 20px;
+position: relative;
+color: #173b6c;
+text-decoration: underline;
+text-decoration-color: 3px solid #149ddd;
+}
+
+.section-title h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #173b6c;
+  }
+
+.section-title p {
+margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.navbar{
+    background-color: #2c2f3f;
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+#about .p-5{
+    background-color: #f5f8fd;
+}
+
+/*--------------------------------------------------------------
+# Stock
+--------------------------------------------------------------*/
+#stocks .px-4{
+    background-color: #f5f8fd;;
+}
+
+/*--------------------------------------------------------------
+# Mortgage
+--------------------------------------------------------------*/
+#mortgage .px-4{
+    background-color: #f5f8fd;;
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.container-footer {
+    background-color: #2c2f3f;
+    padding: 50px 0 20px;
+    text-align: center;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  #footer{
+    padding: 0;
+  }
+  
+  .footer-link {
+    color: #fff !important;
+    margin: 10px 20px;
+  }
+  
+  .copyright {
+    color: #eaf6f6;
+    font-size: 0.75rem;
+    padding: 20px 0;
+  }
+  
