@@ -123,4 +123,27 @@ window.addEventListener('load', function() {
   });
 });
 
+/**
+ * Footer visitor counter
+ */
+
+// Get the span element
+const visitorCountElement = document.querySelector('.container-footer span');
+
+// Get the current visitor count from local storage
+let visitorCount = localStorage.getItem('visitorCount');
+
+// If there is no visitor count in local storage, set it to 0
+if (!visitorCount) {
+  visitorCount = 0;
+}
+
+// Increment the visitor count
+visitorCount++;
+
+// Update the visitor count in local storage
+localStorage.setItem('visitorCount', visitorCount);
+
+// Update the text of the span element with the new visitor count
+visitorCountElement.textContent = `Number of visitors: ${visitorCount}`;
 
