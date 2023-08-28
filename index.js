@@ -131,7 +131,7 @@ window.addEventListener('load', function() {
 const visitorCountElement = document.querySelector('.container-footer span');
 
 // Set the API Gateway endpoint URL
-const apiGatewayUrl = 'https://lox3r7gaki.execute-api.us-east-1.amazonaws.com';
+const apiGatewayUrl = 'https://lox3r7gaki.execute-api.us-east-1.amazonaws.com/prod';
 
 // Fetch the visitor count from the API Gateway endpoint
 fetch(apiGatewayUrl)
