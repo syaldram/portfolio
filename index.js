@@ -130,20 +130,17 @@ window.addEventListener('load', function() {
 // Get the span element
 const visitorCountElement = document.querySelector('.container-footer span');
 
-// Get the current visitor count from local storage
-let visitorCount = localStorage.getItem('visitorCount');
+// Set the API Gateway endpoint URL
+const apiGatewayUrl = 'https://lox3r7gaki.execute-api.us-east-1.amazonaws.com';
 
-// If there is no visitor count in local storage, set it to 0
-if (!visitorCount) {
-  visitorCount = 0;
-}
-
-// Increment the visitor count
-visitorCount++;
-
-// Update the visitor count in local storage
-localStorage.setItem('visitorCount', visitorCount);
-
-// Update the text of the span element with the new visitor count
-visitorCountElement.textContent = `Number of visitors: ${visitorCount}`;
+// Fetch the visitor count from the API Gateway endpoint
+fetch(apiGatewayUrl)
+  .then(response => response.json())
+  .then(visitorCount => {
+    // Update the text of the span element with the visitor count
+    visitorCountElement.textContent = `Number of visitors: ${visitorCount}`;
+  })
+  .catch(error => {
+    console.error('An error occurred while fetching the visitor count:', error);
+  });
 
