@@ -28,4 +28,4 @@ The goal of this project is to create a personal website that showcases my skill
 The web application is hosted on Amazon Web Services (AWS). The backend application diagram and infrastructure as code (IaC) can be found here in this GitHub repository: [https://github.com/syaldram/cloud-resume-challenge](https://github.com/syaldram/cloud-resume-challenge)
 
 ## CI/CD
-TODOs
+The GitHub Actions enabled in this project creates a workflow that automatically builds and deploys the website whenever the code is pushed to repository.
