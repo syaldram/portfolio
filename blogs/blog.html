@@ -330,7 +330,15 @@
       <div class="container-footer">
           <a class="footer-link" href="https://www.linkedin.com/in/saad-yaldram-7b27a72a/"><img src="../assets/svg/linkedin.svg" alt="LinkedIn"> LinkedIn</a>
           <a class="footer-link" href="https://github.com/syaldram"><img src="../assets/svg/github.svg" alt="GitHub"> GitHub</a>
-          <p class="copyright">© 2023 Saad Yaldram</p>
+          <br>
+          <br>
+          <script>
+            document.addEventListener("DOMContentLoaded", function(){
+                var currentYear = new Date().getFullYear();
+                document.getElementById("copyright").textContent = "© " + currentYear + " Saad Yaldram";
+            });
+          </script>
+          <p id="copyright"></p>
         </div>
     </section>  
     <script
