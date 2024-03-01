@@ -67,6 +67,22 @@ var observer = new IntersectionObserver(function(entries) {
 // Observe the About section
 observer.observe(resumeSection);
 
+/**
+ * Portfolio section of the web
+ */
+
+var portfolioSection = document.querySelector('#portfolio');
+// Create an IntersectionObserver
+var observer = new IntersectionObserver(function(entries) {
+  if (entries[0].isIntersecting) {
+    var portfolio = document.querySelector('#portfolio .container');
+    portfolio.classList.add('fade-top');
+  }
+});
+
+// Observe the About section
+observer.observe(portfolioSection);
+
 
 /**
  * Skills section
