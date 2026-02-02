@@ -1,14 +1,27 @@
-  /**
-   * Hero type effect
-   */
+/**
+ * Hero type effect
+ */
 var typed = new Typed('#typed-text', {
-  strings: ["I am a DevOps Engineer.", "I am a Developer.", "I am a Freelancer."],
-  typeSpeed: 100,
-  backSpeed: 50,
-  backDelay: 1500,
-  loop: true
+  strings: ["DevOps Engineer", "Cloud Architect", "Automation Expert", "Freelancer"],
+  typeSpeed: 80,
+  backSpeed: 40,
+  backDelay: 2000,
+  loop: true,
+  showCursor: true,
+  cursorChar: '|'
 });
-  
+
+/**
+ * Navbar scroll effect
+ */
+window.addEventListener('scroll', () => {
+  var navbar = document.querySelector('.navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
 
 /**
  * Navbar links active state on scroll
@@ -19,7 +32,7 @@ window.addEventListener('scroll', () => {
   var fromTop = window.scrollY + 200;
   navLinks.forEach(link => {
     var section = document.querySelector(link.hash);
-    if (
+    if (section && 
       section.offsetTop <= fromTop &&
       section.offsetTop + section.offsetHeight > fromTop
     ) {
@@ -30,23 +43,40 @@ window.addEventListener('scroll', () => {
   });
 });
 
+/**
+ * Smooth scroll for navigation links
+ */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
 
 // Get the About section element
 var aboutSection = document.querySelector('#about');
 
-// Get the .img-fluid element
-var aboutImg = document.querySelector('#about .img-fluid');
-var aboutContent = document.querySelector('#about .content');
+// Get the about image and content elements
+var aboutImg = document.querySelector('#about .about-image');
+var aboutContent = document.querySelector('#about .about-content');
 
-// Create an IntersectionObserver
-var observer = new IntersectionObserver(function(entries) {
-  // Check if the About section is intersecting with the viewport
+// Create an IntersectionObserver for about section
+var aboutObserver = new IntersectionObserver(function(entries) {
   if (entries[0].isIntersecting) {
-    // The About section is visible, add the fade-right class to the .img-fluid element
-    aboutImg.classList.add('fade-right');
-    aboutContent.classList.add('fade-left');
+    if (aboutImg) aboutImg.classList.add('fade-right');
+    if (aboutContent) aboutContent.classList.add('fade-left');
   }
-});
+}, { threshold: 0.2 });
+
+if (aboutSection) {
+  aboutObserver.observe(aboutSection);
+}
 
 // Observe the About section
 observer.observe(aboutSection);
