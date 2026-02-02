@@ -78,9 +78,6 @@ if (aboutSection) {
   aboutObserver.observe(aboutSection);
 }
 
-// Observe the About section
-observer.observe(aboutSection);
-
 /**
  * Resume section of the web
  */
@@ -115,78 +112,25 @@ observer.observe(portfolioSection);
 
 
 /**
- * Skills section
- */
-window.addEventListener('load', function() {
-  // Get the skills section
-  var skillsSection = document.querySelector('#skills');
-  
-  // Get all the progress bars
-  var progressBars = document.querySelectorAll('.progress-bar');
-  
-  // Set a flag to track if the animation has already played
-  var animationPlayed = false;
-  
-  // Create a function to animate the progress bars
-  var animateProgressBars = function() {
-    // Iterate over each progress bar
-    progressBars.forEach(function(progressBar) {
-      // Get the width of the progress bar
-      var width = progressBar.style.width;
-      
-      // Set the initial width to 0
-      progressBar.style.width = '0%';
-      
-      // Animate the width from 0 to its final value
-      var currentWidth = 0;
-      var interval = setInterval(function() {
-        if (currentWidth >= parseInt(width)) {
-          clearInterval(interval);
-        } else {
-          currentWidth++;
-          progressBar.style.width = currentWidth + '%';
-        }
-      }, 10);
-    });
-    
-    // Set the animation played flag to true
-    animationPlayed = true;
-  };
-  
-  // Create a function to check if the skills section is in view
-  var isSkillsSectionInView = function() {
-    var rect = skillsSection.getBoundingClientRect();
-    return rect.top >= 0 && rect.bottom <= window.innerHeight;
-  };
-  
-  // Add an event listener for scroll events
-  window.addEventListener('scroll', function() {
-    // Check if the skills section is in view and the animation has not played yet
-    if (isSkillsSectionInView() && !animationPlayed) {
-      // Animate the progress bars
-      animateProgressBars();
-    }
-  });
-});
-
-/**
  * Footer visitor counter
  */
 
-// Get the span element
-const visitorCountElement = document.querySelector('.container-footer span');
+// Get the visitor count element
+const visitorCountElement = document.getElementById('visitorCount');
 
 // Set the API Gateway endpoint URL
 const apiGatewayUrl = 'https://stfvmcm30d.execute-api.us-east-1.amazonaws.com/prod/counter';
 
 // Fetch the visitor count from the API Gateway endpoint
-fetch(apiGatewayUrl)
-  .then(response => response.json())
-  .then(visitorCount => {
-    // Update the text of the span element with the visitor count
-    visitorCountElement.textContent = `Number of visitors: ${visitorCount}`;
-  })
-  .catch(error => {
-    console.error('An error occurred while fetching the visitor count:', error);
-  });
+if (visitorCountElement) {
+  fetch(apiGatewayUrl)
+    .then(response => response.json())
+    .then(visitorCount => {
+      // Update the text of the span element with the visitor count
+      visitorCountElement.textContent = visitorCount;
+    })
+    .catch(error => {
+      console.error('An error occurred while fetching the visitor count:', error);
+    });
+}
 
