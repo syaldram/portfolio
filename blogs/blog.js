@@ -121,7 +121,25 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // =============================================
-  // 6. Copyright Year
+  // 6. Collapse Navbar on Link Click (mobile)
+  // =============================================
+  const navbarCollapse = document.getElementById("navbarsMain");
+  const navLinks = navbarCollapse.querySelectorAll(".nav-link");
+  navLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+      // Only collapse if the navbar is in mobile (toggler visible)
+      const toggler = document.querySelector(".navbar-toggler");
+      if (toggler && window.getComputedStyle(toggler).display !== "none") {
+        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+        if (bsCollapse) {
+          bsCollapse.hide();
+        }
+      }
+    });
+  });
+
+  // =============================================
+  // 7. Copyright Year
   // =============================================
   const copyrightEl = document.getElementById("copyright");
   if (copyrightEl) {

@@ -299,6 +299,53 @@ section {
   justify-content: center;
 }
 
+@media (max-width: 768px) {
+  .crypto-widget-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    justify-content: flex-start;
+    padding-bottom: 12px;
+    margin: 0 -24px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .crypto-widget-wrapper > div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+
+  /* Scrollbar hint */
+  .crypto-widget-wrapper::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .crypto-widget-wrapper::-webkit-scrollbar-track {
+    background: #e2e8f0;
+    border-radius: 2px;
+  }
+
+  .crypto-widget-wrapper::-webkit-scrollbar-thumb {
+    background: #149ddd;
+    border-radius: 2px;
+  }
+}
+
+.swipe-hint {
+  display: none;
+  text-align: center;
+  color: #999;
+  font-size: 0.8rem;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .swipe-hint {
+    display: block;
+  }
+}
+
 /*--------------------------------------------------------------
 # Mortgage Widget
 --------------------------------------------------------------*/
