@@ -3,349 +3,271 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Investment Portfolio</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"
-    />
-    <link href="./blog.css" rel="stylesheet">
-    <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+    <meta name="description" content="Saad Yaldram's investment portfolio — asset allocations, stock watchlist, crypto holdings, and mortgage rate tracking." />
+    <meta property="og:title" content="Investment Portfolio | Saad Yaldram" />
+    <meta property="og:description" content="A look into my diversified investment strategy across stocks, bonds, crypto, and more." />
+    <title>Investment Portfolio | Saad Yaldram</title>
+
+    <!-- Fonts (matching main site) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+
+    <!-- Chart.js (replaces CanvasJS) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+    <!-- Blog Styles -->
+    <link href="./blog.css" rel="stylesheet" />
   </head>
+
   <body>
+    <!-- ======= Header ======= -->
     <header class="header">
-        <nav class="navbar fixed-top navbar-expand-sm navbar-dark" aria-label="Third navbar example">
-            <div class="container-fluid">
-              <img src="../assets/images/logo.png" height="70" class="rounded-circle" alt="Saad">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-        
-              <div class="collapse navbar-collapse" id="navbarsExample03">
-                <ul class="navbar-nav ms-auto mb-2 mb-sm-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../index.html#Home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../index.html#certifications">Certifications</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="../index.html#skills">Skills</a>
-                </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html#resume">Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html#portfolio">Projects</a>
-                    </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark" aria-label="Main navigation">
+        <div class="container">
+          <a href="../index.html#Home" class="navbar-brand">
+            <img src="../assets/images/logo.png" height="50" class="rounded-circle" alt="Saad" />
+            <span class="brand-name">Saad Yaldram</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMain" aria-controls="navbarsMain" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarsMain">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="../index.html#Home">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="../index.html#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="../index.html#certifications">Certifications</a></li>
+              <li class="nav-item"><a class="nav-link" href="../index.html#skills">Skills</a></li>
+              <li class="nav-item"><a class="nav-link" href="../index.html#resume">Resume</a></li>
+              <li class="nav-item"><a class="nav-link" href="../index.html#portfolio">Projects</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
+
+    <!-- ======= Scroll Progress Bar ======= -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <main>
-      <section id="about">
-        <div>
-            <div class="p-5 text-center">
-              <div class="container py-5 section-title">
-                <h1 class="">Investment Portfolio</h1>
-                <p class="fw-bold display-7">July 31, 2023 By Saad Yaldram</p>
-              </div>
-            </div>
+      <!-- ======= Hero Section ======= -->
+      <section id="hero" class="hero-section">
+        <div class="container">
+          <nav aria-label="breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="../index.html#blog">Blogs</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Investment Portfolio</li>
+            </ol>
+          </nav>
+          <h1 class="hero-title">Investment Portfolio</h1>
+          <div class="hero-meta">
+            <span class="hero-date">July 31, 2023</span>
+            <span class="hero-separator">|</span>
+            <span class="hero-author">By Saad Yaldram</span>
           </div>
-  
+        </div>
       </section>
-      <section id="portfolio">
-        <div class="px-4 py-5 text-center section-title">
-          <h2 class="">Asset Allocations</h2>
-          <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4">Down below are my investment allocation percentages. The figures below are close estimate of my overall portfolio. The asset allocations are constantly changing, and I plan on updating this chart as time moves forward. I tend to be very conservative with my investment and diversifying my assets is my priority. You will see I am also interested in investing in crypto currency and gold. Although the gold and crypto assets make small percentage of my assets, I plan to invest more in the future. </p>
-            <div class="col-lg-6 mx-auto" id="chartContainer" style="height: 500px; width: 100%;">
-              <table class="mx-auto">
-                <thead>
-                    <tr>
-                    <th>Investment</th>
-                    <th>Type</th>
-                    <th>Allocation</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                    <td>Stocks</td>
-                    <td>Stocks</td>
-                    <td>19%</td>
-                    </tr>
-                    <tr>
-                    <td>Bonds</td>
-                    <td>Bonds</td>
-                    <td>33%</td>
-                    </tr>
-                    <tr>
-                    <td>Mutual Funds</td>
-                    <td>Mutual Funds</td>
-                    <td>34%</td>
-                    </tr>
-                    <tr>
-                    <td>US Treasury Bills</td>
-                    <td>US Treasury</td>
-                    <td>8%</td>
-                    </tr>
-                    <tr>
-                    <td>Crypto Currency</td>
-                    <td>Crypto</td>
-                    <td>3%</td>
-                    </tr>
-                    <tr>
-                    <td>Gold</td>
-                    <td>Gold</td>
-                    <td>3%</td>
-                    </tr>
-                </tbody>
-                </table>
+
+      <!-- ======= Table of Contents ======= -->
+      <section id="toc" class="toc-section">
+        <div class="container">
+          <div class="toc-card reveal">
+            <h3 class="toc-title">Table of Contents</h3>
+            <ul class="toc-list">
+              <li><a href="#portfolio">Asset Allocations</a></li>
+              <li><a href="#stocks">Stock Watchlist</a></li>
+              <li><a href="#crypto">Crypto Currency</a></li>
+              <li><a href="#mortgage">Mortgage Interest Rate</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======= Asset Allocations ======= -->
+      <section id="portfolio" class="section-alt">
+        <div class="container">
+          <div class="section-title reveal">
+            <h2>Asset Allocations</h2>
+          </div>
+          <div class="content-card reveal">
+            <p class="lead-text">
+              Below are my investment allocation percentages — a close estimate of my overall portfolio. I tend to be conservative, and diversifying my assets is a top priority. I also invest in crypto and gold, which currently make up a small percentage but I plan to increase over time.
+            </p>
+            <div class="chart-wrapper">
+              <canvas id="allocationChart" aria-label="Investment allocation donut chart" role="img"></canvas>
+            </div>
+            <!-- Hidden data for JS -->
+            <div id="allocationData" style="display:none"
+              data-labels='["Stocks","Bonds","Mutual Funds","US Treasury Bills","Crypto Currency","Gold"]'
+              data-values='[19,33,34,8,3,3]'>
             </div>
           </div>
         </div>
       </section>
- 
+
+      <!-- ======= Stock Watchlist ======= -->
       <section id="stocks">
-        <div class="px-4 py-5 text-center section-title">
-          <h2 class="">My stock watchlist</h2>
-          <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4">I am a long-term passive investor in stock asset class. My trades reflect my personal interest in companies, products, and conservative growth. I am not a financial expert and the stocks listed below reflects 10% of my stock portfolio. The idea of the listed stock below is to provide a glimpse of my financial assets as an example.</p>
-            <div class="row align-items-center">
-              <!-- TradingView Widget BEGIN -->
+        <div class="container">
+          <div class="section-title reveal">
+            <h2>Stock Watchlist</h2>
+          </div>
+          <div class="content-card reveal">
+            <p class="lead-text">
+              I'm a long-term passive investor. My trades reflect personal interest in companies, products, and conservative growth. The stocks listed below represent roughly 10% of my stock portfolio — a glimpse into my investment strategy.
+            </p>
+            <div class="widget-grid" id="stockWidgets">
+              <!-- Row 1 -->
               <div class="tradingview-widget-container">
                 <div class="tradingview-widget-container__widget"></div>
                 <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a></div>
                 <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-                {
-                "symbol": "NASDAQ:TSLA",
-                "width": 278,
-                "colorTheme": "light",
-                "isTransparent": true,
-                "locale": "en"
-              }
+                { "symbol": "NASDAQ:TSLA", "width": "100%", "colorTheme": "light", "isTransparent": true, "locale": "en" }
                 </script>
               </div>
-              <!-- TradingView Widget END -->
-              <!-- TradingView Widget BEGIN -->
               <div class="tradingview-widget-container">
                 <div class="tradingview-widget-container__widget"></div>
                 <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a></div>
                 <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-                {
-                "symbol": "NYSE:DAL",
-                "width": 278,
-                "colorTheme": "light",
-                "isTransparent": true,
-                "locale": "en"
-              }
+                { "symbol": "NYSE:DAL", "width": "100%", "colorTheme": "light", "isTransparent": true, "locale": "en" }
                 </script>
               </div>
-              <!-- TradingView Widget END -->
-              <!-- TradingView Widget BEGIN -->
               <div class="tradingview-widget-container">
                 <div class="tradingview-widget-container__widget"></div>
                 <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a></div>
                 <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-                {
-                "symbol": "OMXHEX:NOKIA",
-                "width": 278,
-                "colorTheme": "light",
-                "isTransparent": true,
-                "locale": "en"
-              }
+                { "symbol": "OMXHEX:NOKIA", "width": "100%", "colorTheme": "light", "isTransparent": true, "locale": "en" }
                 </script>
               </div>
-              <!-- TradingView Widget END -->
-              <!-- TradingView Widget BEGIN -->
               <div class="tradingview-widget-container">
                 <div class="tradingview-widget-container__widget"></div>
                 <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a></div>
                 <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-                {
-                "symbol": "NYSE:PEB/PF",
-                "width": "278",
-                "colorTheme": "light",
-                "isTransparent": true,
-                "locale": "en"
-              }
+                { "symbol": "NYSE:PEB/PF", "width": "100%", "colorTheme": "light", "isTransparent": true, "locale": "en" }
                 </script>
               </div>
-              <!-- TradingView Widget END -->
-              <!-- TradingView Widget BEGIN -->
               <div class="tradingview-widget-container">
                 <div class="tradingview-widget-container__widget"></div>
                 <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a></div>
                 <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-                {
-                "symbol": "NYSE:CVNA",
-                "width": "278",
-                "colorTheme": "light",
-                "isTransparent": true,
-                "locale": "en"
-              }
+                { "symbol": "NYSE:CVNA", "width": "100%", "colorTheme": "light", "isTransparent": true, "locale": "en" }
                 </script>
               </div>
-              <!-- TradingView Widget END -->
-              <!-- TradingView Widget BEGIN -->
               <div class="tradingview-widget-container">
                 <div class="tradingview-widget-container__widget"></div>
                 <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a></div>
                 <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-                {
-                "symbol": "NYSE:LMT",
-                "width": "278",
-                "colorTheme": "light",
-                "isTransparent": true,
-                "locale": "en"
-              }
+                { "symbol": "NYSE:LMT", "width": "100%", "colorTheme": "light", "isTransparent": true, "locale": "en" }
                 </script>
               </div>
-              <!-- TradingView Widget END -->
-            </div>
-            <div class="row align-items-center">
-              <!-- TradingView Widget BEGIN -->
+              <!-- Row 2 -->
               <div class="tradingview-widget-container">
                 <div class="tradingview-widget-container__widget"></div>
                 <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a></div>
                 <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-                {
-                "symbol": "NASDAQ:COIN",
-                "width": "278",
-                "colorTheme": "light",
-                "isTransparent": true,
-                "locale": "en"
-              }
+                { "symbol": "NASDAQ:COIN", "width": "100%", "colorTheme": "light", "isTransparent": true, "locale": "en" }
                 </script>
               </div>
-              <!-- TradingView Widget END -->
-              <!-- TradingView Widget BEGIN -->
               <div class="tradingview-widget-container">
                 <div class="tradingview-widget-container__widget"></div>
                 <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a></div>
                 <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-                {
-                "symbol": "NASDAQ:HOOD",
-                "width": "278",
-                "colorTheme": "light",
-                "isTransparent": true,
-                "locale": "en"
-              }
+                { "symbol": "NASDAQ:HOOD", "width": "100%", "colorTheme": "light", "isTransparent": true, "locale": "en" }
                 </script>
               </div>
-              <!-- TradingView Widget END -->
-              <!-- TradingView Widget BEGIN -->
               <div class="tradingview-widget-container">
                 <div class="tradingview-widget-container__widget"></div>
                 <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a></div>
                 <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-                {
-                "symbol": "NYSE:GME",
-                "width": "278",
-                "colorTheme": "light",
-                "isTransparent": true,
-                "locale": "en"
-              }
+                { "symbol": "NYSE:GME", "width": "100%", "colorTheme": "light", "isTransparent": true, "locale": "en" }
                 </script>
               </div>
-              <!-- TradingView Widget END -->
-              <!-- TradingView Widget BEGIN -->
               <div class="tradingview-widget-container">
                 <div class="tradingview-widget-container__widget"></div>
                 <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a></div>
                 <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-                {
-                "symbol": "NYSE:PLNT",
-                "width": "278",
-                "colorTheme": "light",
-                "isTransparent": true,
-                "locale": "en"
-              }
+                { "symbol": "NYSE:PLNT", "width": "100%", "colorTheme": "light", "isTransparent": true, "locale": "en" }
                 </script>
               </div>
-              <!-- TradingView Widget END -->
-              <!-- TradingView Widget BEGIN -->
               <div class="tradingview-widget-container">
                 <div class="tradingview-widget-container__widget"></div>
                 <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a></div>
                 <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-                {
-                "symbol": "NYSE:D",
-                "width": "278",
-                "colorTheme": "light",
-                "isTransparent": true,
-                "locale": "en"
-              }
+                { "symbol": "NYSE:D", "width": "100%", "colorTheme": "light", "isTransparent": true, "locale": "en" }
                 </script>
               </div>
-              <!-- TradingView Widget END -->
-              <!-- TradingView Widget BEGIN -->
               <div class="tradingview-widget-container">
                 <div class="tradingview-widget-container__widget"></div>
                 <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a></div>
                 <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-                {
-                "symbol": "NYSE:CMG",
-                "width": "278",
-                "colorTheme": "light",
-                "isTransparent": true,
-                "locale": "en"
-              }
+                { "symbol": "NYSE:CMG", "width": "100%", "colorTheme": "light", "isTransparent": true, "locale": "en" }
                 </script>
               </div>
-              <!-- TradingView Widget END -->
             </div>
           </div>
         </div>
       </section>
 
-      <section id="crypto">
-        <div class="px-4 py-5 text-center section-title">
-          <h2 class="">Crypto Currency</h2>
-          <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4">I am an advocate of decentralized currency. I am an avid investor in crypto currency and blockchain technology. Down below are my crypto assets that I have invested over the years. Majority of my crypto assets are in ethereum which consist of the largest profit margin for me. </p>
-            <div class="row align-items-center">
-              <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinPriceBlock.js"></script><div id="coinmarketcap-widget-coin-price-block" coins="1027,3794,2010,1975,1376" currency="USD" theme="light" transparent="true" show-symbol-logo="true"></div>
+      <!-- ======= Crypto Currency ======= -->
+      <section id="crypto" class="section-alt">
+        <div class="container">
+          <div class="section-title reveal">
+            <h2>Crypto Currency</h2>
+          </div>
+          <div class="content-card reveal">
+            <p class="lead-text">
+              I'm an advocate for decentralized currency and an avid investor in crypto and blockchain technology. The majority of my crypto assets are in Ethereum, which has produced the largest profit margin for me.
+            </p>
+            <div class="crypto-widget-wrapper">
+              <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinPriceBlock.js"></script>
+              <div id="coinmarketcap-widget-coin-price-block" coins="1027,3794,2010,1975,1376" currency="USD" theme="light" transparent="true" show-symbol-logo="true"></div>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- ======= Mortgage ======= -->
       <section id="mortgage">
-        <div class="px-4 py-5 text-center section-title">
-          <h2 class="">Mortgage Interest Rate</h2>
-          <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4">I am interested in the daily mortgage interest rate and its effect on real estate market. Monitoring mortgage interest rates can help make informed decisions about when to lock in a good rate, avoid higher costs, and stay informed about current market conditions.</p>
-            <iframe frameborder="0" scrolling="no" style="border: 0; overflow: 0; width: 400px; height: 300px;" src="//www.mortgagecalculator.org/rates-widgets/mortgages/text-widget.php?advanced&amp;data=30yr_fr|15yr_fr"></iframe><br />
+        <div class="container">
+          <div class="section-title reveal">
+            <h2>Mortgage Interest Rate</h2>
+          </div>
+          <div class="content-card reveal">
+            <p class="lead-text">
+              Monitoring mortgage interest rates helps make informed decisions about locking in good rates and staying aware of current market conditions and their effect on real estate.
+            </p>
+            <div class="mortgage-widget-wrapper">
+              <iframe title="Mortgage rate widget" scrolling="no" style="border: 0; width: 100%; max-width: 420px; height: 300px;" src="//www.mortgagecalculator.org/rates-widgets/mortgages/text-widget.php?advanced&amp;data=30yr_fr|15yr_fr"></iframe>
+            </div>
           </div>
         </div>
       </section>
     </main>
-    <section id="footer"> 
+
+    <!-- ======= Back to Top Button ======= -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
       <div class="container-footer">
-          <a class="footer-link" href="https://www.linkedin.com/in/saad-yaldram-7b27a72a/"><img src="../assets/svg/linkedin.svg" alt="LinkedIn"> LinkedIn</a>
-          <a class="footer-link" href="https://github.com/syaldram"><img src="../assets/svg/github.svg" alt="GitHub"> GitHub</a>
-          <br>
-          <br>
-          <script>
-            document.addEventListener("DOMContentLoaded", function(){
-                var currentYear = new Date().getFullYear();
-                document.getElementById("copyright").textContent = "© " + currentYear + " Saad Yaldram";
-            });
-          </script>
-          <p id="copyright"></p>
+        <div class="footer-links">
+          <a class="footer-link" href="https://www.linkedin.com/in/saad-yaldram-7b27a72a/"><img src="../assets/svg/linkedin.svg" alt="LinkedIn" /> LinkedIn</a>
+          <a class="footer-link" href="https://github.com/syaldram"><img src="../assets/svg/github.svg" alt="GitHub" /> GitHub</a>
         </div>
-    </section>  
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-      crossorigin="anonymous"
-    ></script>
+        <p id="copyright" class="copyright"></p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- Blog JS -->
     <script src="./blog.js"></script>
   </body>
 </html>
