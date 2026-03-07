@@ -1,31 +1,104 @@
 # Saad Yaldram's Portfolio
 
-The goal of this project is to create a personal website that showcases my skills, experiences, and interests.  The site should be built entirely with HTML and CSS, JavaScript written by me.
+[![Live Demo](https://img.shields.io/badge/Demo-Live-brightgreen)](https://resume.saadyaldram.com)
+[![GitHub Actions](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-blue)](https://github.com/syaldram/portfolio/actions)
+[![AWS](https://img.shields.io/badge/Hosted%20on-AWS-orange)](https://aws.amazon.com)
 
-## Deliverables
+A personal portfolio website showcasing my skills, experience, and projects as a **DevOps Engineer**. Built with modern web technologies and deployed on AWS infrastructure.
 
-- HTML files for the structure of the website
+🔗 **Live Site:** [resume.saadyaldram.com](https://resume.saadyaldram.com)
 
-- CSS files for the styling of the website
+---
 
-- Any assets (e.g. images) used in the website
+## ✨ Features
 
-- Javascript for animations and backend configurations
+- **Hero Section** – Animated introduction with typed.js effect
+- **About Me** – Background, certifications, and contact information
+- **Certifications** – AWS and other professional certifications
+- **Skills** – Technical skills and tools expertise
+- **Resume** – Education and work experience timeline
+- **Projects** – Showcase of completed projects and work
+- **Blog** – Technical articles and insights
 
-## Features
+## 🛠️ Tech Stack
 
- - A hero section that provides a brief introduction to my background.
+| Category | Technologies |
+|----------|-------------|
+| **Frontend** | HTML5, CSS3, JavaScript |
+| **Framework** | Bootstrap 5 |
+| **Fonts** | Google Fonts (Inter, Poppins) |
+| **Animation** | Typed.js |
+| **Hosting** | AWS (S3, CloudFront, Route 53) |
+| **CI/CD** | GitHub Actions |
 
- - A resume page that lists my education, work experience, skills, and other relevant information.
+## 📁 Project Structure
 
- - A section that showcases any projects or work that I completed in the past.
+```
+portfolio/
+├── index.html          # Main entry point
+├── index.js            # JavaScript functionality
+├── css/
+│   └── style.css       # Main stylesheet
+├── assets/
+│   ├── images/         # Image assets
+│   └── svg/            # SVG icons
+└── blogs/
+    ├── blog.html       # Blog page
+    ├── blog.css        # Blog styles
+    └── blog.js         # Blog functionality
+```
 
- - An about me section that provides additional information about myself and interests.
+## 🚀 Getting Started
 
- - A contact me section that includes information for users to get in touch with me.
+### Prerequisites
+- A modern web browser
+- (Optional) A local web server for development
 
-## Backend
-The web application is hosted on Amazon Web Services (AWS). The backend application diagram and infrastructure as code (IaC) can be found here in this GitHub repository: [https://github.com/syaldram/cloud-resume-challenge](https://github.com/syaldram/cloud-resume-challenge)
+### Local Development
 
-## CI/CD
-The GitHub Actions enabled in this project creates a workflow that automatically builds and deploys the website whenever the code is pushed to repository.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/syaldram/portfolio.git
+   cd portfolio
+   ```
+
+2. **Open in browser**
+   ```bash
+   # Using Python
+   python -m http.server 8000
+   
+   # Or simply open index.html in your browser
+   open index.html
+   ```
+
+3. **View the site**
+   Navigate to `http://localhost:8000` in your browser.
+
+## ☁️ Infrastructure
+
+The website is hosted on **Amazon Web Services (AWS)** using a serverless architecture:
+
+- **S3** – Static website hosting
+- **CloudFront** – CDN for global distribution
+- **Route 53** – DNS management
+- **ACM** – SSL/TLS certificates
+
+📐 **Infrastructure as Code:** The backend architecture and Terraform configurations are available in the [cloud-resume-challenge](https://github.com/syaldram/cloud-resume-challenge) repository.
+
+## 🔄 CI/CD Pipeline
+
+This project uses **GitHub Actions** for continuous integration and deployment:
+
+- Automatically builds and deploys on push to `main` branch
+- Invalidates CloudFront cache for instant updates
+- Ensures consistent deployments across environments
+
+## 📬 Contact
+
+- **Email:** syaldram@gmail.com
+- **Location:** Richmond, VA
+- **Website:** [resume.saadyaldram.com](https://resume.saadyaldram.com)
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
