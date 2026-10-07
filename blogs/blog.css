@@ -500,4 +500,153 @@ footer#footer {
     height: 42px;
   }
 }
+
+.article-page .article-body {
+  max-width: 900px;
+  padding-top: 140px;
+  padding-bottom: 64px;
+  overflow-wrap: anywhere;
+}
+
+.article-page .article-heading h1 {
+  font-size: 2.6rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: #173b6c;
+  margin-bottom: 20px;
+}
+
+.article-page .breadcrumb {
+  justify-content: flex-start;
+}
+
+.article-page .breadcrumb-item a,
+.article-page a {
+  color: #176b9b;
+}
+
+.article-page .breadcrumb-item + .breadcrumb-item::before {
+  color: #68747e;
+}
+
+.article-category {
+  color: #176b9b;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.article-subtitle,
+.article-intro {
+  font-size: 1.15rem;
+}
+
+.article-meta,
+.article-figure figcaption,
+.article-note {
+  color: #56616d;
+  font-size: 0.9rem;
+}
+
+.article-meta span {
+  margin: 0 8px;
+}
+
+.article-heading {
+  margin-bottom: 32px;
+}
+
+.article-page section {
+  padding: 32px 0 0;
+  overflow: visible;
+  scroll-margin-top: 110px;
+}
+
+.article-page section h2 {
+  color: #173b6c;
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+}
+
+.article-page section h3 {
+  font-size: 1.2rem;
+  margin: 28px 0 16px;
+}
+
+.article-page li {
+  margin-bottom: 12px;
+}
+
+.article-page blockquote {
+  margin: 28px 0;
+  border-left: 4px solid #149ddd;
+  padding: 12px 24px;
+  background: #f5f8fd;
+  font-size: 1.15rem;
+}
+
+.article-page blockquote p {
+  margin: 0;
+}
+
+.article-figure {
+  margin: 32px 0;
+}
+
+.article-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.article-figure figcaption {
+  margin-top: 12px;
+}
+
+.article-toc {
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 24px 0 12px;
+}
+
+.article-toc h2 {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.article-note {
+  border-top: 1px solid #e2e8f0;
+  margin-top: 40px;
+  padding-top: 24px;
+}
+
+.article-page .back-to-top {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .article-page .article-body {
+    padding: 120px 24px 48px;
+  }
+
+  .article-page .article-heading h1 {
+    font-size: 2rem;
+  }
+
+  .article-page section h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .article-page,
+  html:has(.article-page) {
+    scroll-behavior: auto;
+  }
+
+  .article-page *,
+  .article-page *::before,
+  .article-page *::after {
+    transition: none !important;
+  }
+}
   

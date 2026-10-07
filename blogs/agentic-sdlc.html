@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="I have spent the last few weeks testing Matt Pocock&rsquo;s AI coding workflow on real working application, and I am impressed with the framework." />
+    <meta property="og:title" content="From Vibe Coding to an Agentic SDLC! | Saad Yaldram" />
+    <meta property="og:description" content="How I turned prompts into agentic workflow" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://saadyaldram.com/assets/images/agentic-sdlc/interview.png" />
+    <meta property="article:published_time" content="2026-10-07" />
+    <title>From Vibe Coding to an Agentic SDLC! | Saad Yaldram</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <link href="./blog.css" rel="stylesheet" />
+  </head>
+  <body class="article-page">
+    <header class="header">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark" aria-label="Main navigation">
+        <div class="container">
+          <a href="../index.html#Home" class="navbar-brand">
+            <img src="../assets/images/logo.png" height="50" class="rounded-circle" alt="Saad" />
+            <span class="brand-name">Saad Yaldram</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMain" aria-controls="navbarsMain" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarsMain">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="../index.html#Home">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="../index.html#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="../index.html#portfolio">Projects</a></li>
+              <li class="nav-item"><a class="nav-link active" href="../index.html#blog">Blogs</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+    <main>
+      <article class="article-body container">
+        <header class="article-heading">
+          <nav aria-label="breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="../index.html#blog">Blogs</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Agentic SDLC</li>
+            </ol>
+          </nav>
+          <p class="article-category">AI &amp; Software Engineering</p>
+          <h1>From Vibe Coding to an Agentic SDLC!</h1>
+          <p class="article-meta"><time datetime="2026-10-07">October 7, 2026</time> <span aria-hidden="true">|</span> By Saad Yaldram</p>
+        </header>
+        <div class="article-copy">
+        <hr />
+        <blockquote><p><em><strong>&ldquo;How I turned prompts into agentic workflow&rdquo;</strong></em></p></blockquote>
+        <p>I have spent the last few weeks testing Matt Pocock&rsquo;s AI coding workflow on real working application, and I am impressed with the framework. Before that lets discuss a bit of history and why there are so many AI software development frameworks created recently?</p>
+        <section id="beyond-vibes">
+          <p><strong>How we got here?</strong></p>
+          <p>AI has reshaped software development in recent years. Since ChatGPT launched in 2022, tools such as ChatGPT and Claude have improved productivity and streamlined development for businesses, developers, and hobbyists. Yet the industry remains in a &ldquo;vibes&rdquo; era, with no consistent standards for AI-assisted workflows.</p>
+          <p><strong>The &ldquo;Vibe Coding&rdquo; Era</strong></p>
+          <p>&ldquo;Vibe coding&rdquo; became a cultural term associated with using AI to create software and features through prompts. Although AI models have improved over time, they still require human guidance, review, and correction. They can make mistakes or hallucinate, while providing context in every prompt can consume the model&rsquo;s context window. Performance may also decline when that window becomes too large.</p>
+          <p>Many &ldquo;vibe coders&rdquo; were unfamiliar with these limitations, as well as with established software development life cycle (SDLC) practices. Because large amounts of code were generated with limited human review, another term emerged: &ldquo;AI slop.&rdquo; This phrase refers to the constant production of low-quality, mass-produced AI generated content and software.</p>
+          <p>The rise of vibe coding was enabled by inexpensive capital for AI companies and subsidies that helped reduce the cost of AI services. However, that period may be coming to an end. As borrowing costs have increased and economic conditions have shifted, companies such as Anthropic and OpenAI have raised token limits while also increasing the prices of their subscription plans.</p>
+          <p><strong>What&rsquo;s next?</strong></p>
+          <p>AI usage as part of the software development life cycle is constantly changing. New frameworks are created from industry leaders and the AI led businesses. Sorting through all this noise can be daunting and creating AI driven SDLC standards can be a monumental task. How does one AI framework fit within our case or our business?</p>
+          <p>One of the frameworks we have explored is spec driven AI software development. The idea is popularized by Matt Pocock who is an AI advocate and a seasoned developer. The idea is to orchestrate the entire SDLC via AI agents harnessed by Codex, Claude and/or GitHub Copilot.</p>
+          <p><strong>What is Spec Driven AI Software Development?</strong></p>
+          <p>&ldquo;TLDR: In the era of AI coding humans need to own as much of the planning stack!&rdquo;</p>
+          <p>The idea is to structure and provides upfront specifications to an AI model to extract as much value and performances in completing the task at hand. The spec driven workflow loops human input as part of the workflow via iterative interview process rather than vibed out prompt. It is very important to create a refined ask/prompt for the AI to better optimize the results otherwise agents can create bad code and incur unnecessary cost. To squeeze out the best performance out of AI software development here are 4 core pillars to include as part of the workflow:</p>
+          <ol>
+            <li><p><strong>The &ldquo;Grill Me&rdquo; Phase:</strong> Using specialized prompts or skills, the AI interrogates you (the developer) to flesh out requirements, edge cases, domain models and constraints before a single line of code is written.</p></li>
+            <li><p><strong>The Spec as an AI Artifact:</strong> Because the LLM context window fills up and degrades, the specification document from the &ldquo;Grill Me&rdquo; session acts as the persistent memory that survives context resets.</p></li>
+            <li><p><strong>Break down Specs into Tasks/Tickets:</strong> Breaking the verified spec down into small chunks so that AI coding agent can execute each tasks individually.</p></li>
+            <li><p><strong>Apply Engineering Principles:</strong> Validate AI coding tasks via test driven development (TDD) and vertical slicing principle in agile.</p></li>
+          </ol>
+        </section>
+        <section id="interview">
+          <h2>The Grill Me or Interview Phase:</h2>
+          <p>The Grill Me or Interview Phase is inspired by Matt Pocock&rsquo;s framework of agentic workflow. Matt is a seasoned developer and the architect of AI engineering workflows who championed the Grill-Me skill in AI workflow. The Grill Me or interview phase forces the developer to spend time thinking and planning before any code is written. The advantage of using this skill is to save cost on wasted time and tokens on poorly defined agent tasks.</p>
+          <p><strong>Where it shines:</strong></p>
+          <ul>
+            <li><p>Clarifies edge cases and design gaps so that the AI doesn&rsquo;t make bad decision and burn through tokens.</p></li>
+            <li><p>Keeps human involved through the entire design and plan stage with human approval at the end.</p></li>
+            <li><p>Recommended answers provide suggested answers which ease decision fatigue.</p></li>
+          </ul>
+          <p><strong>Where it falls:</strong></p>
+          <ul>
+            <li><p>Can inflict decision fatigue based on the asks.</p></li>
+            <li><p>Can asks dozens of design questions for simple bug fixes or quick scripts.</p></li>
+            <li><p>Only handles planning phase and does not include code implementation or finished product.</p></li>
+            <li><p>Extended interview session can extend far beyond context windows of the LLM.</p></li>
+          </ul>
+          <figure class="article-figure">
+            <a href="../assets/images/agentic-sdlc/interview.png" target="_blank" rel="noopener" aria-label="Open the requirements interview screenshot at full size">
+              <img src="../assets/images/agentic-sdlc/interview.png" width="1597" height="565" alt="PRD_with_docs.png" loading="lazy" decoding="async" />
+            </a>
+          </figure>
+          <p>Example above from Grill-Me skill. The AI recommended answers to the interview questions helps offset decision fatigue.</p>
+        </section>
+        <section id="specification">
+          <h2>Specification Document as Artifact:</h2>
+          <p>When a task is determined to be token intensive and long then the &ldquo;spec skill&rdquo; or creating specification document can extract extra value out of LLM models. The spec marks the end goal or destination for AI. The grill-me session or the interview questions and answers are compressed into the specification document and persist across multiple AI sessions. The spec document becomes an AI artifact to be tracked for management purposes and again to provide human verification for AI built product.</p>
+          <figure class="article-figure">
+            <a href="../assets/images/agentic-sdlc/specification.png" target="_blank" rel="noopener" aria-label="Open the specification screenshot at full size">
+              <img src="../assets/images/agentic-sdlc/specification.png" width="1104" height="1197" alt="spec_document.png" loading="lazy" decoding="async" />
+            </a>
+            <figcaption>Example of specification document created from Grill-Me session. This can be an AI Artifact to review and keep the human in the loop throughout planning stages.</figcaption>
+          </figure>
+        </section>
+        <section id="tickets">
+          <h2>Vertical Tickets &amp; Kanban:</h2>
+          <p>Once the specification is complete, we have one more step in extracting extra value out of the LLM model. As mentioned earlier, the large context window can decrease the model performance and often the model itself can find workarounds around code reviews and tests as the token reaches limits. The solution is to take the specification document and turn into tickets kanban style. The reason for the ticket is to allow the subagents to break the implementation of the task into its own context windows and token utilization. This method keeps the agent in what Pocock calls its &ldquo;smart zone&rdquo; where the model is focused on goals instead of bloated context.</p>
+          <p>The tickets act as vertical slices where the AI agent will write test (TDD) first, implement the code and review all within its own context window. The tickets follow the Kanban agile where the AI agent finish an end-to-end loop first before starting the next ticket. In summary, the tickets explicitly require the AI agent to run the test suite and achieve a verified &ldquo;green state&rdquo; before it is allowed to close the context window and mark the Kanban ticket as &ldquo;Done&rdquo;.&nbsp;</p>
+          <figure class="article-figure">
+            <a href="../assets/images/agentic-sdlc/specs-to-tickets.png" target="_blank" rel="noopener" aria-label="Open the specification to tickets screenshot at full size">
+              <img src="../assets/images/agentic-sdlc/specs-to-tickets.png" width="2843" height="1352" alt="specs_to_tickets.png" loading="lazy" decoding="async" />
+            </a>
+            <figcaption>Converting the specification document into vertical slices (tickets) for AI sub agents</figcaption>
+          </figure>
+          <figure class="article-figure">
+            <a href="../assets/images/agentic-sdlc/subagents.png" target="_blank" rel="noopener" aria-label="Open the subagents screenshot at full size">
+              <img src="../assets/images/agentic-sdlc/subagents.png" width="1306" height="624" alt="subagents.png" loading="lazy" decoding="async" />
+            </a>
+          </figure>
+          <figure class="article-figure">
+            <a href="../assets/images/agentic-sdlc/agent-context.png" target="_blank" rel="noopener" aria-label="Open the agent integration screenshot at full size">
+              <img src="../assets/images/agentic-sdlc/agent-context.png" width="1228" height="1060" alt="subagents_context.png" loading="lazy" decoding="async" />
+            </a>
+            <figcaption>Running sub agents with their own individual context window</figcaption>
+          </figure>
+        </section>
+        <section id="verification">
+          <p><strong>Tests are imperative in the age of AI</strong></p>
+          <p>Code reviews and testing have become vital in the age of AI software development. The workflow includes test drive development where agent writes a failing test first and then writes code just enough to make it pass. This creates a feedback loop for the AI agent where we can force the agent to prove to us that its change would genuinely fail without the fix.</p>
+          <figure class="article-figure">
+            <a href="../assets/images/agentic-sdlc/work-tree.png" target="_blank" rel="noopener" aria-label="Open the worktree screenshot at full size">
+              <img src="../assets/images/agentic-sdlc/work-tree.png" width="2698" height="1349" alt="Work_tree.png" loading="lazy" decoding="async" />
+            </a>
+            <figcaption>Each ticket that is implemented by sub agent invokes TDD skill</figcaption>
+          </figure>
+        </section>
+        <section id="lessons">
+          <h2><strong>Final Thoughts</strong></h2>
+          <p>I have been highly impressed with Matt Pocock&rsquo;s AI workflow. Although the &ldquo;grill-me&rdquo; sessions were intensive and initially created decision fatigue, I later recognized their value.</p>
+          <p>For developers working with limited AI budgets, Matt Pocock&rsquo;s framework may be particularly useful when a project is substantial enough to justify a structured workflow. However, the process can be unnecessarily extensive for simple scripts and minor changes.</p>
+          <p>Through my own professional experience, I have concluded that test-driven development (TDD) is essential for AI-assisted coding and plan to incorporate it more consistently in the future. I have also learned that human involvement remains critical: developers must plan effectively, guide the AI, and provide sufficient context. Human reviews are more important than ever, and I believe this will remain a defining aspect of software development in the era of AI.</p>
+        </section>
+        <hr />
+        <blockquote><p><em>This blog was written by a human.<strong> </strong></em>&#128578;<em><strong> </strong></em></p></blockquote>
+        <p><em>Saad Yaldram</em></p>
+        <p>Explore the app built using this AI workflow framework: <a href="https://syaldram.github.io/Solar-System-Orbital-Journey/" target="_blank" rel="noopener noreferrer">Solar-System Orbital Journey</a>.</p>
+        </div>
+        <footer class="article-note">
+          <p><a href="../index.html#blog">&larr; Back to all blogs</a></p>
+        </footer>
+      </article>
+    </main>
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top" title="Back to top"><span aria-hidden="true">&uarr;</span></button>
+    <footer id="footer">
+      <div class="container-footer">
+        <div class="footer-links">
+          <a class="footer-link" href="https://www.linkedin.com/in/saad-yaldram-7b27a72a/">LinkedIn</a>
+          <a class="footer-link" href="https://github.com/syaldram">GitHub</a>
+        </div>
+        <p id="copyright" class="copyright"></p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="./blog.js"></script>
+  </body>
+</html>
